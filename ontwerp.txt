@@ -1,0 +1,22 @@
+Categoriëen voor quiz-1/Pokemon-quiz
+1. Who is that Pokemon
+2. Pokedex entries
+3. Pokemon abilities
+4. Pokemon Signature moves
+
+bij categorie 1 zijn de vragen:
+spreken voor zich, degene waar een afbeelding voor te vinden is.
+
+bij categorie 2 zijn de vragen:
+1. Should you feel yourself attacked by a sudden chill, it is evidence of an approaching -----. There is no escaping it. Give up. (ant = Gengar)
+2. If a child it has made friends with is bullied, ----- will find the bully's house and burn it to the ground.(ant = Drampa)
+3. Its electric charges can reach even 100,000 volts. Careless contact can cause even an Indian elephant to faint.(ant = Raichu)
+4. Using its tail like a spring, it keeps its heart beating by bouncing constantly. If it stops, it dies.(ant = spoink)
+5. It is whispered that any child who mistakes ----- for a balloon and holds on to it could wind up missing.(ant = drifloon)
+
+bij catergorie 3 zijn de vragen:
+1. Wat is de signature ability van de machop evo line?(ant = No Guard)
+2. Welke van deze pokemon heeft the signature ability: Tangling Hair?(ant = Alolan Dugtrio)
+3. Welke pokemon krijgt the signature ability: Quick Draw?(ant = Galarian Slowbro)
+4. Wat is de signature ability van: Primal Groudon?(ant = Desolate Land)
+5. Wat is 
