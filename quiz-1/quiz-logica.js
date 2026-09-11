@@ -1,1 +1,2 @@
-console.log("hallo");
+console.log("JS successvol gekoppeld");
+
