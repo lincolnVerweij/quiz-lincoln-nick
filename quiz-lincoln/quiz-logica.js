@@ -1,11 +1,13 @@
 console.log("JS successvol gekoppeld");
 
-let score = 0;
+let vIndex = 1;
 
-function vraagCorrect() {
-    score = score + 1; 
+function volgendeVraag() {
+    vIndex = vIndex + 1;
+    console.log(vIndex);
+
+    let vraagTitel = document.getElementById("vraagTitel");
+    vraagTitel.innerText = "Vraag " + vIndex + ":";
 }
 
-function result() {
-    console.log("Correcte vragen: " + score);
-}
+console.log(vIndex);

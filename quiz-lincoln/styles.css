@@ -1,3 +1,10 @@
 .btn {
-    margin-bottom: 100px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.txt {
+    text-align: center;
 }
