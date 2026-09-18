@@ -1,0 +1,17 @@
+h1 {
+    text-align: center;
+    font-size: 110px;
+    font-family: 'Comic Sans MS', cursive;
+}
+p {
+    text-align: center;
+}
+.back {
+    text-align: center;
+}
+.quiz-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
