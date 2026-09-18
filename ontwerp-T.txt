@@ -7,7 +7,7 @@ Dieren
 Map locaties
 
 Categorie 1:
-Vraag 1: welke enemy is een Moblin?
+Vraag 1: welke enemy is dit?
 vraag 2: welke enemy heeft het minste health?
 vraag 3: welke enemy heeft het meeste health?
 vraag 4: welke boss is dit?
@@ -24,5 +24,16 @@ categorie 3:
 vraag 11: Welk paard is Epona?
 vraag 12: Welk paard is het witte paard van Zelda?
 vraag 13: welk insect bestaat niet?
-vraag 14:
+vraag 14: welk dier bestaat wel?
+vraag 15: welk dier heeft het meest HP/Health?
+
+catergorie 4:
+vraag 16: Wat is het grootste gebied in Hyrule?
+vraag 17: Wat is het kleinste gebied in Hyrule?
+vraag 18: Hoe heet het gebied waar je het spel begint?
+vraag 19: Hoe heet de volkaan in Hyrule?
+vraag 20: In welk gebied is het altijd zonnig?
+
+Einde.
+
 
