@@ -1,3 +1,20 @@
 .btn {
     margin-bottom: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+} 
+body{
+    background-image: url("https://upload.wikimedia.org/wikipedia/en/c/c6/The_Legend_of_Zelda_Breath_of_the_Wild.jpg?utm_source=en.wikipedia.orgpaign=index&utm_content=original&utm_cam");
+background-repeat: no-repeat;
+background-size: cover;
 }
+h1{
+    background-color: white;
+}
+p{
+    background-color: white;
+}
+
+
+
