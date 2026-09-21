@@ -38,9 +38,10 @@ function kiesAntwoord(gekozenAntwoord) {
         if(cAns === gekozenAntwoord) {
             score = score += 100;
             volgendeVraag();
+            updateScherm();
         } else {
             vIndex = vIndex;
-            updateScherm()
+            updateScherm();
         }
     } else if (vIndex === 2) {
         cAns = 2;
