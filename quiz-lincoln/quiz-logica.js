@@ -33,9 +33,24 @@ function updateScherm() {
 
 function kiesAntwoord(gekozenAntwoord) {
     if (vIndex === 1) {
+        cAns = 1;
+
         if(cAns === gekozenAntwoord) {
             score = score += 100;
             volgendeVraag();
+        } else {
+            vIndex = vIndex;
+            updateScherm()
+        }
+    } else if (vIndex === 2) {
+        cAns = 2;
+
+        if(cAns === gekozenAntwoord) {
+            score = score += 100;
+            volgendeVraag();
+        } else {
+            vIndex = vIndex;
+            updateScherm()
         }
     }
 }
