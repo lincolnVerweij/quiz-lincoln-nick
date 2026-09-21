@@ -1,27 +1,63 @@
-console.log("JS successvol gekoppeld");
+console.log("JS succesvol gekoppeld");
 
-let vIndex = 1;
+const vragen = ["Test 1", "Test 2", "Test 3", "Test 4"];
+let vIndex = 0;
 
-let vragen = ["Test 1", 
-        "Test 2", 
-        "Test 3",
-        "Test 4",]
-        
-vraagTekst.innerText = vragen[0];
+let cAns = -1;
+let score = 0;
 
-function volgendeVraag() {
-    vIndex = vIndex + 1;
-    console.log(vIndex);
+const vraagTekst = document.getElementById("vraagTekst");
+const vraagTitel = document.getElementById("vraagTitel");
+const volgendeKnop = document.getElementById("volgendeKnop");
 
-    //vragen[1];
+const aBtn1 = document.getElementById("btn-1");
+const aBtn2 = document.getElementById("btn-2");
+const aBtn3 = document.getElementById("btn-3");
+const aBtn4 = document.getElementById("btn-4");
 
-    let vTekstIndex = vIndex - 1;
+aBtn1.onclick = function() { kiesAntwoord(1); }
+aBtn2.onclick = function() { kiesAntwoord(2); }
+aBtn3.onclick = function() { kiesAntwoord(3); }
+aBtn4.onclick = function() { kiesAntwoord(4); }
 
-    let vraagTekst = document.getElementById("vraagTekst");
-    vraagTekst.innerText = vragen[vTekstIndex];
+function updateScherm() {
+    vraagTekst.innerText = vragen[vIndex];
+    vraagTitel.innerText = "Vraag " + (vIndex + 1) + ":";
 
-    let vraagTitel = document.getElementById("vraagTitel");
-    vraagTitel.innerText = "Vraag " + vIndex + ":";
+    if (vIndex === vragen.length - 1) {
+        volgendeKnop.innerText = "Finish de quiz";
+    } else {
+        volgendeKnop.innerText = "Volgende vraag";
+    }
 }
 
-console.log(vIndex);
+function kiesAntwoord(gekozenAntwoord) {
+    if (vIndex === 1) {
+        if(cAns === gekozenAntwoord) {
+            score = score += 100;
+            volgendeVraag();
+        }
+    }
+}
+
+function volgendeVraag() {
+    if (vIndex < vragen.length - 1) {
+        vIndex++;
+        updateScherm();
+    } else {
+        toonResultaten();
+    }
+}
+
+function toonResultaten() {
+    vraagTitel.innerText = "Resultaten";
+    vraagTekst.innerText = "Gefeliciteerd! Je hebt alle vragen van de quiz afgerond.";
+    volgendeKnop.style.display = "none";
+
+    aBtn1.style.display = "none";
+    aBtn2.style.display = "none";
+    aBtn3.style.display = "none";
+    aBtn4.style.display = "none";
+}
+
+updateScherm();

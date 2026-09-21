@@ -7,21 +7,28 @@
     <title>Quiz 1</title>
 </head>
 <body>
-    <div class="txt">
-        <h1>Quiz 1 - Nintendo</h1> <br>
 
-        <h3 id="vraagTitel">Vraag 1: </h5> <br>
-        <p id="vraagTekst"></p> <br>
-    </div>
+    <div class="quiz-card">
+        <div class="txt">
+            <h1>Quiz 1 - Nintendo</h1>
+            <h3 id="vraagTitel">Vraag 1:</h3>
+            <p id="vraagTekst"></p>
+        </div>
 
-    <div class="btn">
-        <button>1</button> <button>2</button> <button>3</button> <button>4</button> <br>
+        <div class="antwoorden">
+            <button id="btn-1">1</button>
+            <button id="btn-2">2</button>
+            <button id="btn-3">3</button>
+            <button id="btn-4">4</button>
+        </div>
 
-        <button onclick="volgendeVraag ()">Volgende vraag</button> <br>
-    </div>
-    
-    <div class="txt">
-        <a href="/index.html">Back to home</a> <br>
+        <div class="btn-box">
+            <button id="volgendeKnop" class="btn" onclick="volgendeVraag()">Volgende vraag</button>
+        </div>
+        
+        <div class="txt">
+            <a href="/index.html">Back to home</a>
+        </div>
     </div>
 
     <script src="quiz-logica.js"></script>
