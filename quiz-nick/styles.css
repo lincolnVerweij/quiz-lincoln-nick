@@ -6,12 +6,14 @@ h1 {
 p {
     text-align: center;
 }
-.back {
-    text-align: center;
-}
 .quiz-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
+}
+.back {
+    display: inline-block ;
+    text-decoration: none;
+    color: black;
+    text-align: center;
 }
