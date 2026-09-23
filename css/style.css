@@ -1,15 +1,23 @@
 body {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    background-color: rgb(245, 245, 245);
+}
+
+p {
+    text-align: center;
+    font-size: 1.2em;
+    color: rgb(90, 90, 90);
 }
 
 .title {
     margin-top: 1.5em;
     text-align: center;
+    font-size: 2em;
 }
 
 .quiz-title {
     text-align: center;
-    margin-top: 5em;
+    margin-top: 3em;
 }
 
 .quiz-buttons {
@@ -18,12 +26,28 @@ body {
     width: fit-content; 
     
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center; 
-    gap: 0.5em; 
+    gap: 1em; 
 
-    border: 0.1em solid gray;
+    border: 0.2em solid rgb(4, 4, 4);
     border-radius: 1em;
+    background-color: white;
+}
+
+.quiz-buttons button {
+    margin: 0.5em;
+    padding: 0.8em;
+    font-size: 1.1em;
+    border-radius: 0.5em;
+    border: 0.15em solid rgb(4, 4, 4);
+    background-color: rgb(230, 230, 230);
+}
+  
+.quiz-buttons button:hover {
+    padding: 0.9em;
+    cursor: pointer;
+    background-color: rgb(210, 210, 210);
 }
 
 .github {
@@ -39,7 +63,7 @@ body {
 .github-container {
     font-size: 1.4em;
     text-align: center;
-    margin-top: 5em;
+    margin-top: 4em;
 }
 
 .quiz-L {
