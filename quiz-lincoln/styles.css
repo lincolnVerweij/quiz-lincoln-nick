@@ -11,9 +11,13 @@ body {
 .quiz-card {
     background-color: white;
     padding: 30px;
-    border-radius: 12px;
     width: 350px;
     text-align: center;
+
+    border-color: black;
+    border-radius: 1em;
+    border-width: 0.25em;
+    border-style: solid;
 }
 
 .txt {
@@ -32,6 +36,12 @@ body {
     padding: 10px 15px;
     font-family: Arial, Helvetica, sans-serif;
     cursor: pointer;
+
+    border-color: black;
+    border-radius: 0.75em;
+    border-width: 0.20em;
+    border-style: solid;
+    background-color: white;
 }
 
 .btn-box {
