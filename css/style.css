@@ -12,7 +12,7 @@ p {
 .title {
     margin-top: 1.5em;
     text-align: center;
-    font-size: 2em;
+    font-size: 2.8em;
 }
 
 .quiz-title {
@@ -21,70 +21,68 @@ p {
 }
 
 .quiz-buttons {
-    margin: 2em auto;
-    padding: 1.5em;
-    width: fit-content; 
-    
     display: flex;
-    flex-direction: row;
-    align-items: center; 
-    gap: 1em; 
-
-    border: 0.2em solid rgb(4, 4, 4);
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.2em;
+    background-color: #ffffff;
+    padding: 2em;
     border-radius: 1em;
-    background-color: white;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .quiz-buttons button {
-    margin: 0.5em;
-    padding: 0.8em;
-    font-size: 1.1em;
-    border-radius: 0.5em;
-    border: 0.15em solid rgb(4, 4, 4);
-    background-color: rgb(230, 230, 230);
-}
-  
-.quiz-buttons button:hover {
-    padding: 0.9em;
+    padding: 0.9em 1.4em;
+    font-size: 1em;
+    font-weight: 600;
+    border: none;
+    border-radius: 0.6em;
+    background-color: #f0f2f5;
+    color: #2c3e50;
     cursor: pointer;
-    background-color: rgb(210, 210, 210);
+}
+
+.quiz-buttons button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+.quiz-L:hover {
+    background-color: #e60012;
+    color: #ffffff;
+}
+
+.quiz-N:hover {
+    background-color: #ffcb05;
+    color: #ffffff;
+}
+
+.quiz-T:hover {
+    background-color: #00a0b0;
+    color: #ffffff;
 }
 
 .github {
-    width: 3em;
-    height: 3em;
+    padding: 0.5em 1em;
+    font-size: 0.8em;
+    font-weight: 600;
+    border: none;
+    border-radius: 0.6em;
+    background-color: #040404;
+    color: white;
+    cursor: pointer;
+}
 
-    border-style: solid;
-    border-width: 0.2em;
-    border-color: gray;
-    border-radius: 1em;
+.github:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
 }
 
 .github-container {
     font-size: 1.4em;
     text-align: center;
     margin-top: 4em;
-}
-
-.quiz-L {
-    margin: 0.5em;
-    padding: 0.5em;
-    font-size: 1.3em;
-}
-
-.quiz-N {
-    margin: 0.5em;
-    padding: 0.5em;
-    font-size: 1.3em;
-}
-
-.quiz-T {
-    margin: 0.5em;
-    padding: 0.5em;
-    font-size: 1.3em;
-}
-
-.quiz-T:hover, .quiz-N:hover, .quiz-L:hover {
-    padding: 0.6em;
-    cursor: pointer;    
 }
