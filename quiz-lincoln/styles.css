@@ -50,13 +50,23 @@ body {
     margin-bottom: 20px;
 }
 
-.btn {
+.btn-volgende {
     padding: 12px 20px;
     background-color: #e60012;
     color: white;
     border: none;
-    border-radius: 6px;
+    border-radius: 0.6em;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     cursor: pointer;
+
+    border-style: solid;
+    border-width: 0.23em;
+    border-color: black;
+}
+
+.btn-volgende:hover {
+  background-color: #c40010;
+  color: #ffffff;
+  border-color: #000000;
 }
