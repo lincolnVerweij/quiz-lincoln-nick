@@ -1,16 +1,49 @@
 console.log("JS Gekoppeld");
 const questions = [
     "welke enemy is dit?", // 0
-    "welke enemy heeft het minste health?", // 1
+    "welke enemy heeft het minste health?", // 1"
+    "welke enemy heeft het meeste health?", // 2"
+    "welke boss is dit?", // 3"
+    "Hoeveel divine beasts zijn er?", // 4"
+    "Hoeveel korok seeds zijn er?", // 5"
+    "hoeveel shrines zijn er?", // 6"
+    "wat krijg je als je alle korok seeds vindt?", // 7"
+    "hoeveel genaamde locaties zijn er?", // 8"
+    "wat telt niet mee aan de 100% benodigheden?", // 9"
+    "Hoe heet dit paard?", // 10"
+    "Van wie is dit paard?",  // 11"
+    "welk insect bestaat niet?", // 12"
+    "welk dier bestaat wel?", // 13"
+    "welk dier heeft het meest HP/Health?", // 14"
+    "Wat is het grootste gebied in Hyrule?", // 15"
+    "Wat is het kleinste gebied in Hyrule?", // 16"
+    "Hoe heet het gebied waar je het spel begint?", // 17"
+    "Hoe heet de volkaan in Hyrule?", // 18"
+    "Welk gebied heeft de hoogste temperatuur?", // 19"
+
+    
 
 ]
 
 const possibleAnswers = [
     ["een bokoblin", "een keese", "een moblin", "een lizalfos"], // 0
+    ["een keese", "een bokoblin", "een guardian", "master Kohga"], // 1
+    ["een gold lynel", "Calimity Ganon", "guardian scout++", "master Kohga"], // 2
+    ["stone Talus", "igneo Talus", "luminous Talus", "frost Talus"], // 3
+    ["3", "1", "4", "2"], // 4
+    ["900", "500", "1000", "350"], // 5
+    ["120", "150", "130", "100"], // 6
+    ["Rupees", "Master Sword", "Champion's Tunic", "een drol"], // 7
+    ["206", "260", "226", "250"], // 8
+    ["Korok seeds", "quests", "shrines", "Sheikah towers"], // 9
+    ["Bert", "Ponyta", "Rapidash", "Epona"], // 10
+    ["King Rhoam", "Zelda", "Link", "Daruk"], // 11
+    ["spin", "beetle", "sprinkhaan", "Bee"], // 12
+    ["Varken", "Schaap", "Koe", "Zwijn"], // 13
 ]
 
 const correctAnswer = [
-    "C",
+    "C", "A", "B", "D", "C", "A", "A", "D", "C", "B",
 ]
 
 const questionElement = document.querySelector("#question");
