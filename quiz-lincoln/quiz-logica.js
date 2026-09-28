@@ -60,11 +60,13 @@ let cAns = -1;
 let score = 0;
 let aantalGoed = 0;
 let aantalFout = 0;
+let powerupsGehad = 0;
 
 const vraagTekst = document.getElementById("vraagTekst");
 const vraagTitel = document.getElementById("vraagTitel");
 const volgendeKnop = document.getElementById("volgendeKnop");
 const scoreTracker = document.getElementById("scoreTracker");
+const powerupsText = document.getElementById("powerupsText");
 
 const aBtn1 = document.getElementById("btn-1");
 const aBtn2 = document.getElementById("btn-2");
@@ -76,10 +78,13 @@ aBtn2.onclick = function() { kiesAntwoord(2); }
 aBtn3.onclick = function() { kiesAntwoord(3); }
 aBtn4.onclick = function() { kiesAntwoord(4); }
 
+//update het scherm wanneer na elke vraag
 function updateScherm() {
     vraagTekst.innerText = vragen[vIndex];
     vraagTitel.innerText = "Vraag " + (vIndex + 1) + ":";
     scoreTracker.innerText = "Goed: " + aantalGoed + " | Fout: " + aantalFout;
+    powerupsText.innerText = "Powerups: " + powerupsGehad; 
+
 
     aBtn1.innerText = optie1[vIndex];
     aBtn2.innerText = optie2[vIndex];
@@ -93,20 +98,32 @@ function updateScherm() {
     }
 }
 
+//heb zojuist de 50/50 power up toegevoegd
+//nog tedoen: een duidelijke indicatie voor de powerup
+//nieuw: ik heb een powerup text toegevoegd en nieuwe resultaat text
 function kiesAntwoord(gekozenAntwoord) {
     cAns = goedeAntwoorden[vIndex];
 
-    if(cAns === gekozenAntwoord) {
+    if (cAns === gekozenAntwoord) {
         score += 100;
         aantalGoed++;
+
+        if (aantalFout >= 2) {
+            if (Math.random() < 0.5) {
+                aantalFout -= 2; 
+
+                powerupsGehad += 1; 
+            }
+        }
     } else {
         score -= 25;
         aantalFout++;
     }
-    
+
     volgendeVraag();
 }
 
+//Index beetje raar maar het werkt dus ja. de index begon op -1 dus nu op 0 en het werkt wel
 function volgendeVraag() {
     if (vIndex < vragen.length - 1) {
         vIndex++;
@@ -116,12 +133,14 @@ function volgendeVraag() {
     }
 }
 
+//toon resulaten aan het einde
 function toonResultaten() {
     vraagTitel.innerText = "Resultaten";
     vraagTekst.innerText = "Gefeliciteerd! Je hebt alle vragen afgerond. Je score is: " + score;
     scoreTracker.innerText = "Eindstand - Goed: " + aantalGoed + " | Fout: " + aantalFout;
-    volgendeKnop.style.display = "none";
+    powerupsText.innerText = "Powerups gehad: " + powerupsGehad;
 
+    volgendeKnop.style.display = "none";
     aBtn1.style.display = "none";
     aBtn2.style.display = "none";
     aBtn3.style.display = "none";

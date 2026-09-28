@@ -51,17 +51,17 @@ p {
 }
 
 .quiz-L:hover {
-    background-color: #e60012;
+    background-color: #4f9dbf;
     color: #ffffff;
 }
 
 .quiz-N:hover {
-    background-color: #ffcb05;
+    background-color: #ffb405;
     color: #ffffff;
 }
 
 .quiz-T:hover {
-    background-color: #00a0b0;
+    background-color: #6100b0;
     color: #ffffff;
 }
 
@@ -79,6 +79,7 @@ p {
 .github:hover {
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+    text-decoration: underline;
 }
 
 .github-container {
