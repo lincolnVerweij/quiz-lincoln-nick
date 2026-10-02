@@ -1,0 +1,24 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+.cat-btn {
+    width: 10em;
+    height: 10em;
+    margin: 1em;
+}
+
+.cat-btn:hover {
+    background-color: lightgray;
+    transform: translate(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+.page-title {
+    text-align: center;
+}
