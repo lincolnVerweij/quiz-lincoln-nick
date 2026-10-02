@@ -15,8 +15,8 @@ const questions = [
     "welk insect bestaat niet?", // 12"
     "welk dier bestaat wel?", // 13"
     "welk dier heeft het meest HP/Health?", // 14"
-    "Wat is het grootste gebied in Hyrule?", // 15"
-    "Wat is het kleinste gebied in Hyrule?", // 16"
+    "Wat is het grootste Dorp/Village in Hyrule?", // 15"
+    "Wat is het kleinste Dorp/Village in Hyrule?", // 16"
     "Hoe heet het gebied waar je het spel begint?", // 17"
     "Hoe heet de volkaan in Hyrule?", // 18"
     "Welk gebied heeft de hoogste temperatuur?", // 19"
@@ -38,13 +38,27 @@ const possibleAnswers = [
     ["Korok seeds", "quests", "shrines", "Sheikah towers"], // 9
     ["Bert", "Ponyta", "Rapidash", "Epona"], // 10
     ["King Rhoam", "Zelda", "Link", "Daruk"], // 11
-    ["spin", "beetle", "sprinkhaan", "Bee"], // 12
+    ["Cricket", "beetle", "Spider", "Firefly"], // 12
     ["Varken", "Schaap", "Koe", "Zwijn"], // 13
+    ["giant horse", "honeyvore Bear", "Grizzlemaw Bear", "Great-horned Rhineceros"], // 14
+    ["Rito village", "Hateno village", "Gerudo village", "Zora's Domain"], // 15
+    ["Tarrey Town", "Goron city", "Kakariko village", "Rito village"], // 16
+    ["Temple of time", "Shrine of resurrection", "Korok forest", "Hyrule castle"], // 17
+    ["Death volcano", "Death hill", "Daruk's mountain", "Death mountain"], // 18
+    ["Hebra", "Gerudo desert", "Gerudo highlands", "Eldin"], // 19
+
 ]
 
 const correctAnswer = [
-    "C", "A", "B", "D", "C", "A", "A", "D", "C", "B",
+    "C", "A", "B", "D", "C", "A", "A", "D", "C", "B", "D", "B", "C", "A", "C", "B", "B", "B", "D", "D"
 ]
+
+controleerAntwoord(antwoord);
+
+if (antwoord === vraag.correct) {
+    score++;
+}
+currentQuestion++;
 
 const questionElement = document.querySelector("#question");
 const feedbackElement = document.querySelector("#feedback");
@@ -85,4 +99,8 @@ function loadQuestion() {
     buttonBElement.textContent = answers[1];
     buttonCElement.textContent = answers[2];
     buttonDElement.textContent = answers[3];
+}
+
+function toonVraag() {
+    
 }
