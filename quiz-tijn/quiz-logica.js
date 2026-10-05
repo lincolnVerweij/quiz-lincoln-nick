@@ -53,6 +53,8 @@ const correctAnswer = [
     "C", "A", "B", "D", "C", "A", "A", "D", "C", "B", "D", "B", "C", "A", "C", "B", "B", "B", "D", "D"
 ]
 
+let knop = document.querySelector("#Start quiz"); 
+
 controleerAntwoord(antwoord);
 
 if (antwoord === vraag.correct) {
