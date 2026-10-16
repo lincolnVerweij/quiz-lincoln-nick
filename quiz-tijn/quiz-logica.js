@@ -1,23 +1,23 @@
 console.log("JS Gekoppeld");
 const questions = [
-    "welke enemy is dit?", // 0
+    "welke enemy is het grootst van deze 4?", // 0
     "welke enemy heeft het minste health?", // 1"
     "welke enemy heeft het meeste health?", // 2"
-    "welke boss is dit?", // 3"
+    "welke boss/enemy heeft de meeste varianten?", // 3"
     "Hoeveel divine beasts zijn er?", // 4"
     "Hoeveel korok seeds zijn er?", // 5"
     "hoeveel shrines zijn er?", // 6"
     "wat krijg je als je alle korok seeds vindt?", // 7"
     "hoeveel genaamde locaties zijn er?", // 8"
     "wat telt niet mee aan de 100% benodigheden?", // 9"
-    "Hoe heet dit paard?", // 10"
-    "Van wie is dit paard?",  // 11"
+    "Van wie is het paard Epona?", // 10"
+    "Van wie is het koningklijke witte paard?",  // 11"
     "welk insect bestaat niet?", // 12"
-    "welk dier bestaat wel?", // 13"
+    "welk dier bestaat niet?", // 13"
     "welk dier heeft het meest HP/Health?", // 14"
     "Wat is het grootste Dorp/Village in Hyrule?", // 15"
     "Wat is het kleinste Dorp/Village in Hyrule?", // 16"
-    "Hoe heet het gebied waar je het spel begint?", // 17"
+    "Hoe heet de plek waar je het spel begint?", // 17"
     "Hoe heet de volkaan in Hyrule?", // 18"
     "Welk gebied heeft de hoogste temperatuur?", // 19"
 
@@ -29,15 +29,15 @@ const possibleAnswers = [
     ["een bokoblin", "een keese", "een moblin", "een lizalfos"], // 0
     ["een keese", "een bokoblin", "een guardian", "master Kohga"], // 1
     ["een gold lynel", "Calimity Ganon", "guardian scout++", "master Kohga"], // 2
-    ["stone Talus", "igneo Talus", "luminous Talus", "frost Talus"], // 3
+    ["Talus", "Chuchus", "Keese", "Lizalfos"], // 3
     ["3", "1", "4", "2"], // 4
     ["900", "500", "1000", "350"], // 5
     ["120", "150", "130", "100"], // 6
     ["Rupees", "Master Sword", "Champion's Tunic", "een drol"], // 7
     ["206", "260", "226", "250"], // 8
     ["Korok seeds", "quests", "shrines", "Sheikah towers"], // 9
-    ["Bert", "Ponyta", "Rapidash", "Epona"], // 10
-    ["King Rhoam", "Zelda", "Link", "Daruk"], // 11
+    ["Bert", "Zelda", "King Rhoam", "Link"], // 10
+    ["King Rhoam", "Zelda", "Sidon", "Daruk"], // 11
     ["Cricket", "beetle", "Spider", "Firefly"], // 12
     ["Varken", "Schaap", "Koe", "Zwijn"], // 13
     ["giant horse", "honeyvore Bear", "Grizzlemaw Bear", "Great-horned Rhineceros"], // 14
@@ -53,19 +53,13 @@ const correctAnswer = [
     "C", "A", "B", "D", "C", "A", "A", "D", "C", "B", "D", "B", "C", "A", "C", "B", "B", "B", "D", "D"
 ]
 
-controleerAntwoord(antwoord);
-
-if (antwoord === vraag.correct) {
-    score++;
-}
-currentQuestion++;
 
 const questionElement = document.querySelector("#question");
 const feedbackElement = document.querySelector("#feedback");
-const buttonAElement = document.querySelector("#button-a");
-const buttonBElement = document.querySelector("#button-B");
-const buttonCElement = document.querySelector("#button-C");
-const buttonDElement = document.querySelector("#button-D");
+const buttonAElement = document.querySelector("#btn-A");
+const buttonBElement = document.querySelector("#btn-B");
+const buttonCElement = document.querySelector("#btn-C");
+const buttonDElement = document.querySelector("#btn-D");
 
 let currentQuestion = 0;
 let score = 0;
@@ -81,8 +75,11 @@ function checkAnswer(input) {
         feedbackElement.textContent = "Correct!";
         score++;
     } else {
-        feedbackElement.textContent = "Fout!";
+        feedbackElement.textContent = "Fout! Het was antwoord " + answer;
     }
+
+    currentQuestion++;
+    loadQuestion();
 }
 
 function loadQuestion() {
@@ -101,6 +98,4 @@ function loadQuestion() {
     buttonDElement.textContent = answers[3];
 }
 
-function toonVraag() {
-    
-}
+loadQuestion();
