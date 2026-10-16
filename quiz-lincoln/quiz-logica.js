@@ -1,6 +1,6 @@
 console.log("JS succesvol gekoppeld");
 
-const categorieData = {
+const categorieData = { //alle data gesplitst voor meerdere cats werkt een soortvan
     1: {
         titel: "Legendarische game-franchises",
         vragen: [
@@ -64,7 +64,7 @@ const categorieData = {
 };
 
 const urlParams = new URLSearchParams(window.location.search);
-const gekozenCat = urlParams.get('cat') || 1; 
+const gekozenCat = urlParams.get('cat') || 1; //geen idee hoe dit werkt. dankjewel stackoverflow
 
 const actieveCategorie = categorieData[gekozenCat];
 const vragen = actieveCategorie.vragen;
@@ -95,7 +95,7 @@ const aBtn4 = document.getElementById("btn-4");
 aBtn1.onclick = function() { kiesAntwoord(1); }
 aBtn2.onclick = function() { kiesAntwoord(2); }
 aBtn3.onclick = function() { kiesAntwoord(3); }
-aBtn4.onclick = function() { kiesAntwoord(4); }
+aBtn4.onclick = function() { kiesAntwoord(4); } //spaghetti
 
 volgendeKnop.onclick = function() {
     aantalFout++;
@@ -103,7 +103,7 @@ volgendeKnop.onclick = function() {
     volgendeVraag();
 };
 
-function updateScherm() {
+function updateScherm() { //dit werkt. op zich alleen beetje raar dat die op -1 staat.
     vraagTekst.innerText = vragen[vIndex];
     vraagTitel.innerText = "Vraag " + (vIndex + 1) + ":";
     scoreTracker.innerText = "Goed: " + aantalGoed + " | Fout: " + aantalFout;
@@ -151,7 +151,7 @@ function volgendeVraag() {
     }
 }
 
-function toonResultaten() {
+function toonResultaten() { //dit is onaangepast
     vraagTitel.innerText = "Resultaten";
     vraagTekst.innerText = "Gefeliciteerd! Je hebt alle vragen afgerond. Je score is: " + score;
     scoreTracker.innerText = "Eindstand - Goed: " + aantalGoed + " | Fout: " + aantalFout;
