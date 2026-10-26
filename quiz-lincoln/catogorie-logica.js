@@ -5,6 +5,8 @@ const cat2 = document.querySelector(".cat-2");
 const cat3 = document.querySelector(".cat-3");
 const cat4 = document.querySelector(".cat-4");
 
+const terugBtn = document.querySelector(".terug-btn");
+
 cat1.addEventListener("click", function(){
     window.location.href = "/quiz-lincoln/quiz-index.html?cat=1";
 });
@@ -19,4 +21,8 @@ cat3.addEventListener("click", function(){
 
 cat4.addEventListener("click", function(){
     window.location.href = "/quiz-lincoln/quiz-index.html?cat=4";
+});
+
+terugBtn.addEventListener("click", function(){
+    window.location.href = "/index.html";
 });

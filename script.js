@@ -1,10 +1,12 @@
 console.log("JS Gekoppeld");
 
-let lincButton = document.querySelector(".quiz-L");
-let nickButton = document.querySelector(".quiz-N");
-let tijnButton = document.querySelector(".quiz-T"); 
+const lincButton = document.querySelector(".quiz-L");
+const nickButton = document.querySelector(".quiz-N");
+const tijnButton = document.querySelector(".quiz-T"); 
 
-let githubButton = document.querySelector(".github"); 
+const homepageTxt = document.querySelector(".homepageTxt");
+
+const githubButton = document.querySelector(".github"); 
 
 lincButton.addEventListener("click", function(){
     window.location.href = "/quiz-lincoln/catogorie-index.html";
@@ -21,3 +23,4 @@ tijnButton.addEventListener("click", function(){
 githubButton.addEventListener("click", function(){
     location.href = "https://github.com/lincolnVerweij/quiz-lincoln-nick";
 });
+
