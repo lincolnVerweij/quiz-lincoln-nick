@@ -31,6 +31,7 @@ let PossibleAnswersWITP = [
     ["zigzagoon", "incinaroar", "treecko", "salamance"]
 ]
 
+let shimimiya = shimimiya
 
 
 
