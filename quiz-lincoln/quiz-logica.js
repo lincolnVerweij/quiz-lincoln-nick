@@ -1,6 +1,6 @@
 console.log("JS succesvol gekoppeld");
 
-const categorieData = { //alle data gesplitst voor meerdere cats werkt een soortvan
+const categorieData = {
     1: {
         titel: "Legendarische game-franchises",
         vragen: [
@@ -64,7 +64,7 @@ const categorieData = { //alle data gesplitst voor meerdere cats werkt een soort
 };
 
 const urlParams = new URLSearchParams(window.location.search);
-const gekozenCat = urlParams.get('cat') || 1; //geen idee hoe dit werkt. dankjewel stackoverflow
+const gekozenCat = urlParams.get('cat') || 1;
 
 const actieveCategorie = categorieData[gekozenCat];
 const vragen = actieveCategorie.vragen;
@@ -95,7 +95,7 @@ const aBtn4 = document.getElementById("btn-4");
 aBtn1.onclick = function() { kiesAntwoord(1); }
 aBtn2.onclick = function() { kiesAntwoord(2); }
 aBtn3.onclick = function() { kiesAntwoord(3); }
-aBtn4.onclick = function() { kiesAntwoord(4); } //spaghetti
+aBtn4.onclick = function() { kiesAntwoord(4); }
 
 volgendeKnop.onclick = function() {
     aantalFout++;
@@ -103,7 +103,7 @@ volgendeKnop.onclick = function() {
     volgendeVraag();
 };
 
-function updateScherm() { //dit werkt. op zich alleen beetje raar dat die op -1 staat.
+function updateScherm() {
     vraagTekst.innerText = vragen[vIndex];
     vraagTitel.innerText = "Vraag " + (vIndex + 1) + ":";
     scoreTracker.innerText = "Goed: " + aantalGoed + " | Fout: " + aantalFout;
@@ -151,7 +151,12 @@ function volgendeVraag() {
     }
 }
 
-function toonResultaten() { //dit is onaangepast
+function toonResultaten() {
+    let oudeHighScore = localStorage.getItem('quizScoreLincoln');
+    if (oudeHighScore === null || score > Number(oudeHighScore)) {
+        localStorage.setItem('quizScoreLincoln', score);
+    }
+
     vraagTitel.innerText = "Resultaten";
     vraagTekst.innerText = "Gefeliciteerd! Je hebt alle vragen afgerond. Je score is: " + score;
     scoreTracker.innerText = "Eindstand - Goed: " + aantalGoed + " | Fout: " + aantalFout;
