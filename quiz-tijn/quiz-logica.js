@@ -58,6 +58,16 @@ const buttonAElement = document.querySelector("#btn-A");
 const buttonBElement = document.querySelector("#btn-B");
 const buttonCElement = document.querySelector("#btn-C");
 const buttonDElement = document.querySelector("#btn-D");
+const startBtn = document.querySelector(".btn");
+const backHomeBtn = document.querySelector(".backHomeBtn");
+
+startBtn.addEventListener("click", function(){
+    window.location.href = "/quiz-tijn/quiz-vragen.html";
+})
+
+backHomeBtn.addEventListener("click", function(){
+    window.location.href = "/index.html";
+})
 
 let currentQuestion = 0;
 let score = 0;
