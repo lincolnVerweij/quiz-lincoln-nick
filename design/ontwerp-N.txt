@@ -1,6 +1,6 @@
 Categoriëen voor quiz-1/Pokemon-quiz
 1. Who is that Pokemon
-2. Pokedex entries
+2. Weird pokedex entries
 3. Pokemon abilities
 4. Pokemon Signature moves
 

@@ -22,7 +22,15 @@ p {
     background-color: salmon;
     font-family: 'Arial', cursive;
 }
-.button-time {
+.button-categorie {
     text-align: center;
     margin-top: 40px;
+}
+
+.notshow {
+    display: none;
+}
+
+.core-WITP {
+    text-align: center;
 }

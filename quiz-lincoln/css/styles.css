@@ -60,6 +60,7 @@ body {
     border-style: solid;
     border-width: 0.23em;
     border-color: black;
+    transition: all 0.35s ease;
 }
 
 .btn-volgende:hover {

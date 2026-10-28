@@ -64,7 +64,7 @@ const categorieData = {
 };
 
 const urlParams = new URLSearchParams(window.location.search);
-const gekozenCat = urlParams.get('cat') || 1; 
+const gekozenCat = urlParams.get('cat') || 1;
 
 const actieveCategorie = categorieData[gekozenCat];
 const vragen = actieveCategorie.vragen;
@@ -152,6 +152,11 @@ function volgendeVraag() {
 }
 
 function toonResultaten() {
+    let oudeHighScore = localStorage.getItem('quizScoreLincoln');
+    if (oudeHighScore === null || score > Number(oudeHighScore)) {
+        localStorage.setItem('quizScoreLincoln', score);
+    }
+
     vraagTitel.innerText = "Resultaten";
     vraagTekst.innerText = "Gefeliciteerd! Je hebt alle vragen afgerond. Je score is: " + score;
     scoreTracker.innerText = "Eindstand - Goed: " + aantalGoed + " | Fout: " + aantalFout;

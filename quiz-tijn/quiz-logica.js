@@ -20,10 +20,8 @@ const questions = [
     "Hoe heet de plek waar je het spel begint?", // 17"
     "Hoe heet de volkaan in Hyrule?", // 18"
     "Welk gebied heeft de hoogste temperatuur?", // 19"
-
-    
-
 ]
+
 
 const possibleAnswers = [
     ["een bokoblin", "een keese", "een moblin", "een lizalfos"], // 0
