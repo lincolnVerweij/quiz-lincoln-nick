@@ -79,14 +79,13 @@ function checkAnswer(input) {
         feedbackElement.textContent = "Correct!";
         score++;
     } else {
-        feedbackElement.textContent = "Fout! Het antwoord was " + answer;
+        feedbackElement.textContent = "Fout!";
     }
 
-    currentQuestion++;
-
     setTimeout(() => {
+        currentQuestion++;
         loadQuestion();
-    }, 1200);
+    }, 1000);
 }
 
 function loadQuestion() {
