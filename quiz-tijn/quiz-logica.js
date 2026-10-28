@@ -68,7 +68,7 @@ if (startBtn) {
 
 if (backHomeBtn) {
     backHomeBtn.addEventListener("click", function () {
-        window.location.href = "quiz-index.html";
+        window.location.href = "/index.html";
     });
 }
 
