@@ -76,6 +76,10 @@ let score = 0;
 input is A B C of D"
 */
 
+button.addEventListener("click", function () {
+    titel.style.color = "green"
+});
+
 function checkAnswer(input) {
     const answer = correctAnswer[currentQuestion]; // A, B, C, D
 
