@@ -1,56 +1,52 @@
-console.log("JS Gekoppeld");
 const questions = [
-    "welke enemy is het grootst van deze 4?", // 0
-    "welke enemy heeft het minste health?", // 1"
-    "welke enemy heeft het meeste health?", // 2"
-    "welke boss/enemy heeft de meeste varianten?", // 3"
-    "Hoeveel divine beasts zijn er?", // 4"
-    "Hoeveel korok seeds zijn er?", // 5"
-    "hoeveel shrines zijn er?", // 6"
-    "wat krijg je als je alle korok seeds vindt?", // 7"
-    "hoeveel genaamde locaties zijn er?", // 8"
-    "wat telt niet mee aan de 100% benodigheden?", // 9"
-    "Van wie is het paard Epona?", // 10"
-    "Van wie is het koningklijke witte paard?",  // 11"
-    "welk insect bestaat niet?", // 12"
-    "welk dier bestaat niet?", // 13"
-    "welk dier heeft het meest HP/Health?", // 14"
-    "Wat is het grootste Dorp/Village in Hyrule?", // 15"
-    "Wat is het kleinste Dorp/Village in Hyrule?", // 16"
-    "Hoe heet de plek waar je het spel begint?", // 17"
-    "Hoe heet de volkaan in Hyrule?", // 18"
-    "Welk gebied heeft de hoogste temperatuur?", // 19"
-]
-
+    "welke enemy is het grootst van deze 4?",
+    "welke enemy heeft het minste health?",
+    "welke enemy heeft het meeste health?",
+    "welke boss/enemy heeft de meeste varianten?",
+    "Hoeveel divine beasts zijn er?",
+    "Hoeveel korok seeds zijn er?",
+    "hoeveel shrines zijn er?",
+    "wat krijg je als je alle korok seeds vindt?",
+    "hoeveel genaamde locaties zijn er?",
+    "wat telt niet mee aan de 100% benodigheden?",
+    "Van wie is het paard Epona?",
+    "Van wie is het koningklijke witte paard?",
+    "welk insect bestaat niet?",
+    "welk dier bestaat niet?",
+    "welk dier heeft het meest HP/Health?",
+    "Wat is het grootste Dorp/Village in Hyrule?",
+    "Wat is het kleinste Dorp/Village in Hyrule?",
+    "Hoe heet de plek waar je het spel begint?",
+    "Hoe heet de volkaan in Hyrule?",
+    "Welk gebied heeft de hoogste temperatuur?"
+];
 
 const possibleAnswers = [
-    ["een bokoblin", "een keese", "een moblin", "een lizalfos"], // 0
-    ["een keese", "een bokoblin", "een guardian", "master Kohga"], // 1
-    ["een gold lynel", "Calimity Ganon", "guardian scout++", "master Kohga"], // 2
-    ["Talus", "Chuchus", "Keese", "Lizalfos"], // 3
-    ["3", "1", "4", "2"], // 4
-    ["900", "500", "1000", "350"], // 5
-    ["120", "150", "130", "100"], // 6
-    ["Rupees", "Master Sword", "Champion's Tunic", "een drol"], // 7
-    ["206", "260", "226", "250"], // 8
-    ["Korok seeds", "quests", "shrines", "Sheikah towers"], // 9
-    ["Bert", "Zelda", "King Rhoam", "Link"], // 10
-    ["King Rhoam", "Zelda", "Sidon", "Daruk"], // 11
-    ["Cricket", "beetle", "Spider", "Firefly"], // 12
-    ["Varken", "Schaap", "Koe", "Zwijn"], // 13
-    ["giant horse", "honeyvore Bear", "Grizzlemaw Bear", "Great-horned Rhineceros"], // 14
-    ["Rito village", "Hateno village", "Gerudo village", "Zora's Domain"], // 15
-    ["Tarrey Town", "Goron city", "Kakariko village", "Rito village"], // 16
-    ["Temple of time", "Shrine of resurrection", "Korok forest", "Hyrule castle"], // 17
-    ["Death volcano", "Death hill", "Daruk's mountain", "Death mountain"], // 18
-    ["Hebra", "Gerudo desert", "Gerudo highlands", "Eldin"], // 19
-
-]
+    ["een bokoblin", "een keese", "een moblin", "een lizalfos"],
+    ["een keese", "een bokoblin", "een guardian", "master Kohga"],
+    ["een gold lynel", "Calamity Ganon", "guardian scout++", "master Kohga"],
+    ["Talus", "Chuchus", "Keese", "Lizalfos"],
+    ["3", "1", "4", "2"],
+    ["900", "500", "1000", "350"],
+    ["120", "150", "130", "100"],
+    ["Rupees", "Master Sword", "Champion's Tunic", "een drol"],
+    ["206", "260", "226", "250"],
+    ["Korok seeds", "Quests", "Shrines", "Sheikah towers"],
+    ["Bert", "Zelda", "King Rhoam", "Link"],
+    ["King Rhoam", "Zelda", "Sidon", "Daruk"],
+    ["Cricket", "Beetle", "Spider", "Firefly"],
+    ["Varken", "Schaap", "Koe", "Zwijn"],
+    ["Giant Horse", "Honeyvore Bear", "Grizzlemaw Bear", "Great-horned Rhinoceros"],
+    ["Rito village", "Hateno village", "Gerudo village", "Zora's Domain"],
+    ["Tarrey Town", "Goron city", "Kakariko village", "Rito village"],
+    ["Temple of time", "Shrine of Resurrection", "Korok forest", "Hyrule castle"],
+    ["Death volcano", "Death hill", "Daruk's mountain", "Death mountain"],
+    ["Hebra", "Gerudo desert", "Gerudo highlands", "Eldin"]
+];
 
 const correctAnswer = [
-    "C", "A", "B", "D", "C", "A", "A", "D", "C", "B", "D", "B", "C", "A", "C", "B", "B", "B", "D", "D"
-]
-
+    "C", "A", "B", "D", "C", "A", "A", "D", "C", "B", "D", "B", "C", "A", "C", "B", "A", "B", "D", "D"
+];
 
 const questionElement = document.querySelector("#question");
 const feedbackElement = document.querySelector("#feedback");
@@ -58,42 +54,61 @@ const buttonAElement = document.querySelector("#btn-A");
 const buttonBElement = document.querySelector("#btn-B");
 const buttonCElement = document.querySelector("#btn-C");
 const buttonDElement = document.querySelector("#btn-D");
+const startBtn = document.querySelector(".btn");
+const backHomeBtn = document.querySelector(".backHomeBtn");
 
 let currentQuestion = 0;
 let score = 0;
 
-/*
-input is A B C of D"
-*/
+if (startBtn) {
+    startBtn.addEventListener("click", function () {
+        window.location.href = "quiz-vragen.html";
+    });
+}
+
+if (backHomeBtn) {
+    backHomeBtn.addEventListener("click", function () {
+        window.location.href = "/index.html";
+    });
+}
 
 function checkAnswer(input) {
-    const answer = correctAnswer[currentQuestion]; // A, B, C, D
+    const answer = correctAnswer[currentQuestion];
 
     if (input === answer) {
         feedbackElement.textContent = "Correct!";
         score++;
     } else {
-        feedbackElement.textContent = "Fout! Het was antwoord " + answer;
+        feedbackElement.textContent = "Fout!";
     }
 
-    currentQuestion++;
-    loadQuestion();
+    setTimeout(() => {
+        currentQuestion++;
+        loadQuestion();
+    }, 1000);
 }
 
 function loadQuestion() {
+    if (!questionElement) return;
 
     if (currentQuestion >= questions.length) {
-        alert("Dat was de quiz! Je hebt " + score + " punten.");
+        questionElement.textContent = "Quiz Afgerond!";
+        feedbackElement.textContent = "Je eindscore is " + score + " van de " + questions.length + " punten!";
+        if (buttonAElement) buttonAElement.parentElement.style.display = "none";
         return;
     }
+
+    feedbackElement.textContent = "";
     const question = questions[currentQuestion];
     const answers = possibleAnswers[currentQuestion];
 
-    questionElement.textContent = question;
+    questionElement.textContent = (currentQuestion + 1) + ". " + question;
     buttonAElement.textContent = answers[0];
     buttonBElement.textContent = answers[1];
     buttonCElement.textContent = answers[2];
     buttonDElement.textContent = answers[3];
 }
 
-loadQuestion();
+if (questionElement) {
+    loadQuestion();
+}
