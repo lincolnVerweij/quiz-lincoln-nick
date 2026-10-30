@@ -68,7 +68,7 @@ if (startBtn) {
 
 if (backHomeBtn) {
     backHomeBtn.addEventListener("click", function () {
-        window.location.href = "quiz-index.html";
+        window.location.href = "/index.html";
     });
 }
 
@@ -79,14 +79,13 @@ function checkAnswer(input) {
         feedbackElement.textContent = "Correct!";
         score++;
     } else {
-        feedbackElement.textContent = "Fout! Het antwoord was " + answer;
+        feedbackElement.textContent = "Fout!";
     }
 
-    currentQuestion++;
-
     setTimeout(() => {
+        currentQuestion++;
         loadQuestion();
-    }, 1200);
+    }, 1000);
 }
 
 function loadQuestion() {
@@ -113,3 +112,26 @@ function loadQuestion() {
 if (questionElement) {
     loadQuestion();
 }
+
+console.log("JS Gekoppeld");
+
+const cat1 = document.querySelector(".cat-button1");
+const cat2 = document.querySelector(".cat-button2");
+const cat3 = document.querySelector(".cat-button3");
+const cat4 = document.querySelector(".cat-button4");
+
+cat1.addEventListener("click", function(){
+    window.location.href = "/quiz-tijn/quiz-vragen.html?cat=1";
+});
+
+cat2.addEventListener("click", function(){
+    window.location.href = "/quiz-tijn/quiz-vragen.html?cat=2";
+});
+
+cat3.addEventListener("click", function(){
+    window.location.href = "/quiz-tijn/quiz-vragen.html?cat=3";
+});
+
+cat4.addEventListener("click", function(){
+    window.location.href = "/quiz-tijn/quiz-vragen.html?cat=4";
+});

@@ -19,17 +19,61 @@ WITPbutton.addEventListener("click", function() {
     coreHome.classList.add("notshow")
 })
 
+let currentQuestionWITP = 0;
+let scoreWITP = 0;
+
+let startbuttonWITP = document.querySelector("#startButWITP")
+
+startbuttonWITP.addEventListener("click", function() {
+    loadQuestionWITP()
+})
+
 /*vragen-WITP*/
 
-let wAnsWITP1 = document.querySelector(".wAnsWITP1")
-let gAnsWITP1 = document.querySelector(".gAnsWITP1")
 
-let PossibleAnswersWITP = [
-    ["azumarill", "charizard", "pikachu", "greninja"]
-    ["zapdos", "talonflame", "fearow", "swellow"]
-    ["rayquaza", "gengar", "drifloon", "cubone"]
-    ["zigzagoon", "incinaroar", "treecko", "salamance"]
+
+const questionsAsObjectsWITP = [
+    {
+        afbeelding: "",
+        question: "Who is that pokemon?",
+        answers: ["azumarill", "charizard", "pikachu", "greninja"],
+        answer: "pikachu"
+    },
+    {
+        afbeelding: "",
+        questions: "",
+        answers: ["", "", "", ""],
+        answer: ""
+    },
+    {
+        afbeelding: "",
+        question: "",
+        answers: ["", "", "", ""],
+        answer: ""
+    },
+    {
+        afbeelding: "",
+        questions: "",
+        answers: ["", "", "", ""],
+        answer: ""
+    },
+    {
+        afbeelding: "",
+        questions: "",
+        answers: ["", "", "", ""],
+        answer: ""
+    },
 ]
+
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+
+    return array;
+}
 
 
 
@@ -54,27 +98,10 @@ WPEbutton.addEventListener("click", function() {
 
 /*einde categorie 2*/
 
-
-
-
 /*voorbeeld objects*/
 
-const questionsAsObject = [
-    {
-        afbeelding: "",
-        question: "",
-        answers: ["", "", "", ""],
-        answer: ""
-    },
-    {
-        afbeelding: "",
-        questions: "",
-        answers: ["", "", "", ""],
-        answer: ""
-    }
-    
-]
 
-questionsAsObject[0]
 
+
+console.log(questionsAsObjectsWITP[0].question)
 /*voorbeeld objects*/
