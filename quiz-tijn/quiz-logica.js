@@ -48,6 +48,13 @@ const correctAnswer = [
     "C", "A", "B", "D", "C", "A", "A", "D", "C", "B", "D", "B", "C", "A", "C", "B", "A", "B", "D", "D"
 ];
 
+function toonNaam() {
+    let naam = document.getElementById("naam").value;
+
+    document.getElementById("resultaat").innerHTML =
+    "Welkom " + naam + "!";  
+}
+
 const questionElement = document.querySelector("#question");
 const feedbackElement = document.querySelector("#feedback");
 const buttonAElement = document.querySelector("#btn-A");
