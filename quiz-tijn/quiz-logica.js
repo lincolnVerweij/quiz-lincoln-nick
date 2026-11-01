@@ -86,13 +86,13 @@ function checkAnswer(input) {
         feedbackElement.textContent = "Correct!";
         score++;
     } else {
-        feedbackElement.textContent = "Fout!";
+        feedbackElement.textContent = "Fout! Het juiste antwoord is: " + answer;
     }
 
     setTimeout(() => {
         currentQuestion++;
         loadQuestion();
-    }, 1000);
+    }, 1500 );
 }
 
 function loadQuestion() {
