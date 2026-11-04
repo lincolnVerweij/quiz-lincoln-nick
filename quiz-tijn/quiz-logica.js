@@ -95,7 +95,7 @@ function loadQuestion() {
         questionElement.textContent = "Quiz Afgerond!";
         feedbackElement.textContent = "Je eindscore is " + score + " van de " + questions.length + " punten!";
         if (buttonAElement) buttonAElement.parentElement.style.display = "none";
-        return;
+        return;e
     }
 
     feedbackElement.textContent = "";

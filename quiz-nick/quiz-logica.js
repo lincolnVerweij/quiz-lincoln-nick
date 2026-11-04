@@ -1,9 +1,10 @@
-console.log("hetwerkt?")
+console.log("hetwerkt?");
 
+let coreHome = document.querySelector(".coreHome");
 
-let sigMoves = document.querySelector(".cat-button3")
-let sigAbility = document.querySelector(".cat-button4")
-let coreHome = document.querySelector(".coreHome")
+let sigMoves = document.querySelector(".cat-button3");
+let sigAbility = document.querySelector(".cat-button4");
+
 
 
 
@@ -11,24 +12,48 @@ let coreHome = document.querySelector(".coreHome")
 
 /*categorie 1*/
 
-let coreWITP = document.querySelector(".core-WITP")
+let coreWITP = document.querySelector(".core-WITP");
 let WITPbutton = document.querySelector(".cat-button1");
+
+let startButtonWITP = document.querySelector("#startButWITP");
+let vragenWITP = document.querySelector(".vragenWITP-v1");
+let nextQWITP = document.querySelector(".nextQ");
+
+let questionWITP = document.querySelector("#qWITP");
+let butAWITP = document.querySelector("#AnsWITPa");
+let butBWITP = document.querySelector("#AnsWITPb");
+let butCWITP = document.querySelector("#AnsWITPc");
+let butDWITP = document.querySelector("#AnsWITPd");
+
+let feedBack = document.querySelector("#feedbackWITP");
+let scoreDisplayWITP = document.querySelector("#scoreDisplayWITP");
+let qCounterWITP = document.querySelector("#qCounterWITP")
+
 
 WITPbutton.addEventListener("click", function() {
     coreWITP.classList.remove("notshow")
     coreHome.classList.add("notshow")
 })
 
-let currentQuestionWITP = 0;
-let scoreWITP = 0;
-
-let startbuttonWITP = document.querySelector("#startButWITP")
-
-startbuttonWITP.addEventListener("click", function() {
+startButtonWITP.addEventListener("click", function() {
+    vragenWITP.classList.remove("notshow")
+    startButtonWITP.classList.add("notshow")
+    nextQWITP.classList.remove("notshow")
     loadQuestionWITP()
 })
 
+nextQWITP.addEventListener("click", function() {
+
+    feedBack.textContent = ""
+    loadQuestionWITP()
+
+})
+
 /*vragen-WITP*/
+
+
+
+
 
 
 
@@ -41,27 +66,27 @@ const questionsAsObjectsWITP = [
     },
     {
         afbeelding: "",
-        questions: "",
-        answers: ["", "", "", ""],
-        answer: ""
+        question: "Who is that pokemon?",
+        answers: ["gengar", "groudon", "pidgey", "snorlax"],
+        answer: "snorlax"
     },
     {
         afbeelding: "",
-        question: "",
-        answers: ["", "", "", ""],
-        answer: ""
+        question: "test",
+        answers: ["1", "2", "3", "4"],
+        answer: "3"
     },
     {
         afbeelding: "",
-        questions: "",
-        answers: ["", "", "", ""],
-        answer: ""
+        question: "test2",
+        answers: ["1", "2", "3", "4"],
+        answer: "4"
     },
     {
         afbeelding: "",
-        questions: "",
-        answers: ["", "", "", ""],
-        answer: ""
+        question: "test3",
+        answers: ["1", "2", "3", "4"],
+        answer: "1"
     },
 ]
 
@@ -76,7 +101,73 @@ function shuffleArray(array) {
 }
 
 
+let shuffledQuestionsWITP = shuffleArray([...questionsAsObjectsWITP]);
 
+let currentQuestionWITP = -1;
+let scoreWITP = 0;
+
+
+function loadQuestionWITP() {
+
+    currentQuestionWITP++;
+
+    if (currentQuestionWITP >= shuffledQuestionsWITP.length) {
+
+        questionWITP.textContent = "Categorie voltooid!";
+        nextQWITP.classList.add("notshow");
+        vragenWITP.classList.add("notshow");
+        feedBack.classList.add("notshow");
+
+    }
+    else {
+        
+
+    let currentQuestionWITPs = shuffledQuestionsWITP[currentQuestionWITP]
+
+        questionWITP.textContent = currentQuestionWITPs.question
+
+        butAWITP.textContent = currentQuestionWITPs.answers[0];
+        butBWITP.textContent = currentQuestionWITPs.answers[1];
+        butCWITP.textContent = currentQuestionWITPs.answers[2];
+        butDWITP.textContent = currentQuestionWITPs.answers[3];
+    }
+}
+
+
+
+function checkAnswerWITP(input) {
+
+    let currentQuestionWITPs = shuffledQuestionsWITP[currentQuestionWITP]
+
+    const answerWITP = currentQuestionWITPs.answer;
+
+    if (input === answerWITP) {
+        feedBack.textContent = "Correct! Druk op volgende vraag!";
+        scoreWITP = scoreWITP + 25
+        scoreDisplayWITP.textContent = "Score: " + scoreWITP;
+    } 
+    else {
+        feedBack.textContent = "Fout!";
+        scoreWITP = scoreWITP - 25
+        scoreDisplayWITP.textContent = "Score: " + scoreWITP;
+    }
+}
+
+butAWITP.addEventListener("click", function(){
+    checkAnswerWITP(butAWITP.textContent)
+})
+
+butBWITP.addEventListener("click", function(){
+    checkAnswerWITP(butBWITP.textContent)
+})
+
+butCWITP.addEventListener("click", function(){
+    checkAnswerWITP(butCWITP.textContent)
+})
+
+butDWITP.addEventListener("click", function(){
+    checkAnswerWITP(butDWITP.textContent)
+})
 
 
 /*vragen-WITP*/
