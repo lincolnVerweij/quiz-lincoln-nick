@@ -48,6 +48,13 @@ const correctAnswer = [
     "C", "A", "B", "D", "C", "A", "A", "D", "C", "B", "D", "B", "C", "A", "C", "B", "A", "B", "D", "D"
 ];
 
+function toonNaam() {
+    let naam = document.getElementById("naam").value;
+
+    document.getElementById("resultaat").innerHTML =
+    "Welkom " + naam + "!";  
+}
+
 const questionElement = document.querySelector("#question");
 const feedbackElement = document.querySelector("#feedback");
 const buttonAElement = document.querySelector("#btn-A");
@@ -79,13 +86,13 @@ function checkAnswer(input) {
         feedbackElement.textContent = "Correct!";
         score++;
     } else {
-        feedbackElement.textContent = "Fout!";
+        feedbackElement.textContent = "Fout! Het juiste antwoord is: " + answer;
     }
 
     setTimeout(() => {
         currentQuestion++;
         loadQuestion();
-    }, 1000);
+    }, 1500 );
 }
 
 function loadQuestion() {
@@ -112,3 +119,26 @@ function loadQuestion() {
 if (questionElement) {
     loadQuestion();
 }
+
+console.log("JS Gekoppeld");
+
+const cat1 = document.querySelector(".cat-button1");
+const cat2 = document.querySelector(".cat-button2");
+const cat3 = document.querySelector(".cat-button3");
+const cat4 = document.querySelector(".cat-button4");
+
+cat1.addEventListener("click", function(){
+    window.location.href = "/quiz-tijn/quiz-vragen.html?cat=1";
+});
+
+cat2.addEventListener("click", function(){
+    window.location.href = "/quiz-tijn/quiz-vragen.html?cat=2";
+});
+
+cat3.addEventListener("click", function(){
+    window.location.href = "/quiz-tijn/quiz-vragen.html?cat=3";
+});
+
+cat4.addEventListener("click", function(){
+    window.location.href = "/quiz-tijn/quiz-vragen.html?cat=4";
+});

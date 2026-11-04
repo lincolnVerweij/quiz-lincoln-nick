@@ -67,6 +67,11 @@ const urlParams = new URLSearchParams(window.location.search);
 const gekozenCat = urlParams.get('cat') || 1;
 
 const actieveCategorie = categorieData[gekozenCat];
+
+// Hier is nieuwe code toegepast om de vragen te randomiseren via een gewone array met indices
+const origineleIndices = [0, 1, 2, 3, 4];
+const vragenIndices = origineleIndices.sort(function() { return Math.random() - 0.5; });
+
 const vragen = actieveCategorie.vragen;
 const optie1 = actieveCategorie.optie1;
 const optie2 = actieveCategorie.optie2;
@@ -104,15 +109,18 @@ volgendeKnop.onclick = function() {
 };
 
 function updateScherm() {
-    vraagTekst.innerText = vragen[vIndex];
+    // Hier is nieuwe code toegepast om de geschudde index op te halen i.p.v. een vaste volgorde
+    let echteIndex = vragenIndices[vIndex];
+    
+    vraagTekst.innerText = vragen[echteIndex];
     vraagTitel.innerText = "Vraag " + (vIndex + 1) + ":";
     scoreTracker.innerText = "Goed: " + aantalGoed + " | Fout: " + aantalFout;
     powerupsText.innerText = "Powerups: " + powerupsGehad; 
 
-    aBtn1.innerText = optie1[vIndex];
-    aBtn2.innerText = optie2[vIndex];
-    aBtn3.innerText = optie3[vIndex];
-    aBtn4.innerText = optie4[vIndex];
+    aBtn1.innerText = optie1[echteIndex];
+    aBtn2.innerText = optie2[echteIndex];
+    aBtn3.innerText = optie3[echteIndex];
+    aBtn4.innerText = optie4[echteIndex];
 
     if (vIndex === vragen.length - 1) {
         volgendeKnop.innerText = "Finish de quiz";
@@ -122,7 +130,9 @@ function updateScherm() {
 }
 
 function kiesAntwoord(gekozenAntwoord) {
-    cAns = goedeAntwoorden[vIndex];
+    // Hier is nieuwe code toegepast zodat het juiste antwoord ook overeenkomt met de geschudde vraag
+    let echteIndex = vragenIndices[vIndex];
+    cAns = goedeAntwoorden[echteIndex];
 
     if (cAns === gekozenAntwoord) {
         score += 100;
