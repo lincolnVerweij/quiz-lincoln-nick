@@ -27,3 +27,26 @@ bij categorie 4 zijn de vragen:
 3. Wat is de signature move van de pokemon Arceus?(ant = Judgement)
 4. Welke signature move kan pikachu leren?(ant = zippy zap, splishy splash en floaty fall)
 5. Welke pokemon heeft de signature move: Sketch?(ant = smeargle)
+
+
+eventlisteners toevoegen voor knoppen
+vragen counter
+
+
+display: grid;
+    grid-template-columns: 1fr 6fr;
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas: 
+    "hd hd"
+    "as s0"
+    "as s1"
+    "as s2"
+    "fr fr"
+    ;
+    padding: 100px;
+    justify-content: center;
+    text-align: center;
+
+    .my-grid > header {
+    grid-area: hd;
+}

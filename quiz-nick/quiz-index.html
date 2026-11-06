@@ -8,46 +8,179 @@
 </head>
 <body>
 <div class="coreHome">
-   <h1>Pokemon Quiz</h1>
+    <div class="gridHome">
+        <img id="titleImg" src="Images/PokemonQuizTitle.png"> 
     
-    <div class="quiz-container">
+        <div class="quiz-container">
         
-        <a class="back" href="/index.html">Back to home</a>
+            <a class="back" href="/index.html">Back to home</a>
 
-        <p>Welkom bij de Pokemon quiz!</p> <br>
-        <p>Deze quiz heeft 4 categorieën en iedere categorie bevat 5 vragen.</p>
-    </div>
+            <p id="welcomeMsg">Welkom bij de Pokemon quiz!</p> <br>
+            <p id="introMsg">Deze quiz heeft 4 categorieën en iedere categorie bevat 5 vragen.</p>
+            <br>
+            <p id="totalScoreDisplay">totale score: 0</p>
+        </div>
+
+        <div class="seperate"></div>
     
-    <div class="button-categorie">
-        <button class="cat-button1">Who is that pokemon</button>
-        <button class="cat-button2">Weird pokedex entries</button>
-        <button class="cat-button3">Pokemon signature abilites</button>
-        <button class="cat-button4">Pokemon signature moves</button>
+        <div class="button-categorie">
+            <button class="cat-button1">Who is that pokemon</button>
+            <button class="cat-button2">Weird pokedex entries</button>
+            <button class="cat-button3">Pokemon signature abilites</button>
+            <button class="cat-button4">Pokemon signature moves</button>
+        </div>
     </div>
 </div>
 
 <div class="core-WITP notshow">
-    <h2>Who is that pokemon?</h2>
+    
     <br><br><br>
-    <button id="startButWITP">Start quiz!</button>
-    <div class="vragenWITP-v1">
-        <button class="AnsWITPa"></button>
-        <button class="AnsWITPb"></button>
-        <button class="AnsWITPc"></button>
-        <button class="AnsWITPd"></button>
+    <div class="gridWITP">
+        <h1>Who is that pokemon?</h1>
+
+        <h2 id="qWITP"></h2>
+
+        <h3 id="qCounterWITP"></h3>
+
+        <img id="pokemonImgWITP" class="notshow" src="" alt="Pokemon">
+
+        <h2 id="feedbackWITP"></h2>
+
+        <br>
+
+        <h3 id="scoreDisplayWITP">Score: 0</h3>
+
+        <br>
+
+        <button id="startButWITP">Start quiz!</button>
+
+        <button class="returnButWITP notshow">Return</button>
+
+        <div class="questionsWITPv1 notshow">
+            <button id="AnsWITPa"></button>
+            <button id="AnsWITPb"></button>
+            <button id="AnsWITPc"></button>
+            <button id="AnsWITPd"></button>
+        </div>
+
+        <br><br>
+    
+        <button class="nextQWITP notshow">Volgende vraag</button>
     </div>
 </div>
 
 <div class="core-WPE notshow">
-    test2
+
+    <br><br><br>
+
+    <div class="gridWPE">
+
+        <h1>Weird Pokédex Entries</h1>
+
+        <h2 id="qWPE"></h2>
+
+        <h3 id="qCounterWPE"></h3>
+
+        <h2 id="feedbackWPE"></h2>
+
+        <br>
+
+        <h3 id="scoreDisplayWPE">Score: 0</h3>
+
+        <br>
+
+        <button id="startButWPE">Start quiz!</button>
+
+        <button class="returnButWPE notshow">Return</button>
+
+        <div class="questionsWPE notshow">
+            <button id="AnsWPEa"></button>
+            <button id="AnsWPEb"></button>
+            <button id="AnsWPEc"></button>
+            <button id="AnsWPEd"></button>
+        </div>
+
+        <br><br>
+
+        <button class="nextQWPE notshow">Volgende vraag</button>
+
+    </div>
 </div>
 
 <div class="core-PSA notshow">
-    test3
+
+    <br><br><br>
+
+    <div class="gridPSA">
+
+        <h1>Pokémon Signature Abilities</h1>
+
+        <h2 id="qPSA"></h2>
+
+        <h3 id="qCounterPSA"></h3>
+
+        <h2 id="feedbackPSA"></h2>
+
+        <br>
+
+        <h3 id="scoreDisplayPSA">Score: 0</h3>
+
+        <br>
+
+        <button id="startButPSA">Start quiz!</button>
+
+        <button class="returnButPSA notshow">Return</button>
+
+        <div class="questionsPSA notshow">
+            <button id="AnsPSAa"></button>
+            <button id="AnsPSAb"></button>
+            <button id="AnsPSAc"></button>
+            <button id="AnsPSAd"></button>
+        </div>
+
+        <br><br>
+
+        <button class="nextQPSA notshow">Volgende vraag</button>
+
+    </div>
 </div>
 
 <div class="core-PSM notshow">
-    test4
+
+    <br><br><br>
+
+    <div class="gridPSM">
+
+        <h1>Pokémon Signature Moves</h1>
+
+        <h2 id="qPSM"></h2>
+
+        <h3 id="qCounterPSM"></h3>
+
+        <h2 id="feedbackPSM"></h2>
+
+        <br>
+
+        <h3 id="scoreDisplayPSM">Score: 0</h3>
+
+        <br>
+
+        <button id="startButPSM">Start quiz!</button>
+
+        <button class="returnButPSM notshow">Return</button>
+
+        <div class="questionsPSM notshow">
+            <button id="AnsPSMa"></button>
+            <button id="AnsPSMb"></button>
+            <button id="AnsPSMc"></button>
+            <button id="AnsPSMd"></button>
+        </div>
+
+        <br><br>
+
+        <button class="nextQPSM notshow">Volgende vraag</button>
+
+    </div>
 </div>
 
 <script src="/quiz-nick/quiz-logica.js"></script>

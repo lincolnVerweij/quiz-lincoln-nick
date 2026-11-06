@@ -1,14 +1,44 @@
-h1 {
-    text-align: center;
-    font-size: 90px;
-    font-family: 'Comic Sans MS', cursive;
-    height: 80px;
+body {
+    background-image: url("Images/background-Home.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
 }
+
+.titleHome {
+    text-align: center;
+    font-size: 80px;
+    font-family: 'Comic Sans MS', cursive;
+}
+
+#welcomeMsg {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#introMsg {
+    font-size: 20px;
+    font-weight: bold;
+}
+
 p {
     text-align: center;
 }
+
 .quiz-container {
     text-align: center;
+}
+
+#pokemonImgWITP {
+    width: 350px;
+    height: 350px;
+    object-fit: contain;
+    background-color: white;
+    margin: -10px
 }
 
 .back {
@@ -21,6 +51,7 @@ p {
     padding: 5px 15px;
     background-color: salmon;
     font-family: 'Arial', cursive;
+    margin-bottom: 30px;
 }
 .button-categorie {
     text-align: center;
@@ -33,4 +64,197 @@ p {
 
 .core-WITP {
     text-align: center;
+    
 }
+
+.gridWITP {
+    display: grid;
+    justify-content: center;
+    border-color: black;
+    border-radius: 1em;
+    border-width: 0.25em;
+    border-style: solid;
+    background-color: white;
+    margin-left: 450px;
+    margin-right: 450px;
+}
+
+#AnsWITPa {
+    margin-right: 10px;
+    font-size: 25px;
+    
+}
+
+#AnsWITPb {
+    margin-right: 10px;
+    font-size: 25px;
+}
+
+#AnsWITPc {
+    margin-right: 10px;
+    font-size: 25px;
+}
+
+#AnsWITPd {
+    font-size: 25px;
+}
+
+
+.nextQWITP {
+    padding: 15px;
+    margin-bottom: 20px;
+    font-size: 25px
+}
+
+.cat-button1 {
+    font-size: 20px;
+}
+
+.cat-button2 {
+    font-size: 20px;
+}
+
+.cat-button3 {
+    font-size: 20px;
+}
+
+.cat-button4 {
+    font-size: 20px;
+}
+
+.gridHome {
+    display: grid;
+    padding: 30px;
+    border-color: black;
+    border-radius: 1em;
+    border-width: 0.25em;
+    border-style: solid;
+    margin-left: 350px;
+    margin-right: 350px;
+    margin-top: 70px;
+    background-color: white;
+    align-items: center;
+}
+
+#titleImg {
+    height: 135px;
+    width: 810px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.cat-button1 {
+    width: 200px;
+    height: 130px;
+    padding: 10px 15px;
+    margin: 30px;
+}
+.cat-button2 {
+    width: 200px;
+    height: 130px;
+    padding: 10px 15px;
+    margin: 30px;
+}
+.cat-button3 {
+    width: 200px;
+    height: 130px;
+    padding: 10px 15px;
+    margin: 30px;
+}
+.cat-button4 {
+    width: 200px;
+    height: 130px;
+    padding: 10px 15px;
+    margin: 30px;
+}
+
+
+
+.core-WPE {
+    text-align: center;
+}
+
+.gridWPE {
+    display: grid;
+    justify-content: center;
+    border-color: black;
+    border-radius: 1em;
+    border-width: 0.25em;
+    border-style: solid;
+    background-color: white;
+    margin-left: 450px;
+    margin-right: 450px;
+}
+
+.questionsWPE button {
+    margin-right: 10px;
+    font-size: 25px;
+}
+
+.nextQWPE {
+    padding: 15px;
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+
+
+
+.core-PSA {
+    text-align: center;
+}
+
+.gridPSA {
+    display: grid;
+    justify-content: center;
+    border-color: black;
+    border-radius: 1em;
+    border-width: 0.25em;
+    border-style: solid;
+    background-color: white;
+    margin-left: 450px;
+    margin-right: 450px;
+}
+
+.questionsPSA button {
+    margin-right: 10px;
+    font-size: 25px;
+}
+
+.nextQPSA {
+    padding: 15px;
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+
+
+
+.core-PSM {
+    text-align: center;
+}
+
+.gridPSM {
+    display: grid;
+    justify-content: center;
+    border-color: black;
+    border-radius: 1em;
+    border-width: 0.25em;
+    border-style: solid;
+    background-color: white;
+    margin-left: 450px;
+    margin-right: 450px;
+}
+
+.questionsPSM button {
+    margin-right: 10px;
+    font-size: 25px;
+}
+
+.nextQPSM {
+    padding: 15px;
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
