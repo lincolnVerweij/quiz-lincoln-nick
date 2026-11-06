@@ -108,6 +108,14 @@ volgendeKnop.onclick = function() {
     volgendeVraag();
 };
 
+let username = localStorage.getItem('username');
+
+if (username !== null) {
+    document.getElementById('usernameTxt').innerText = "Username: " + username;
+} else {
+    document.getElementById('usernameTxt').innerText = "Username: ";
+}
+
 function updateScherm() {
     // Hier is nieuwe code toegepast om de geschudde index op te halen i.p.v. een vaste volgorde
     let echteIndex = vragenIndices[vIndex];

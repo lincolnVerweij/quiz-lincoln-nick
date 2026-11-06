@@ -7,6 +7,9 @@ const cat4 = document.querySelector(".cat-4");
 
 const terugBtn = document.querySelector(".terug-btn");
 
+let username = prompt("Wat is je naam?");
+localStorage.setItem('username', username);
+
 cat1.addEventListener("click", function(){
     window.location.href = "/quiz-lincoln/quiz-index.html?cat=1";
 });
