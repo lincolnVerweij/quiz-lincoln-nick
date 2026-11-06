@@ -6,14 +6,6 @@ const tijnButton = document.querySelector(".quiz-T");
 
 const githubButton = document.querySelector(".github"); 
 
-let opgeslagenScore = localStorage.getItem('quizScoreLincoln');
-
-if (opgeslagenScore !== null) {
-    document.getElementById('lincolnHighScore').innerText = "Highscore: " + opgeslagenScore;
-} else {
-    document.getElementById('lincolnHighScore').innerText = "Highscore: 0";
-}
-
 lincButton.addEventListener("click", function(){
     window.location.href = "/quiz-lincoln/catogorie-index.html";
 });
