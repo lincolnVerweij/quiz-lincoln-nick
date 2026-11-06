@@ -15,6 +15,16 @@ body {
     font-family: 'Comic Sans MS', cursive;
 }
 
+#welcomeMsg {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#introMsg {
+    font-size: 20px;
+    font-weight: bold;
+}
+
 p {
     text-align: center;
 }

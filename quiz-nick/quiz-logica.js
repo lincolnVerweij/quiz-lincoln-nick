@@ -29,9 +29,19 @@ let returnButWITP = document.querySelector(".returnButWITP");
 let feedBack = document.querySelector("#feedbackWITP");
 let scoreDisplayWITP = document.querySelector("#scoreDisplayWITP");
 let qCounterWITP = document.querySelector("#qCounterWITP");
+let totalScoreDisplay = document.querySelector("#totalScoreDisplay");
 
 let pokemonImgWITP = document.querySelector("#pokemonImgWITP");
 
+let totalScore = 0;
+
+totalScoreDisplay.textContent = "score: " + totalScore;
+
+function updateTotalScore() {
+    totalScore = scoreWITP + scoreWPE + scorePSA + scorePSM;
+    totalScoreDisplay.textContent = "Totale score: " + totalScore;
+
+}
 
 WITPbutton.addEventListener("click", function() {
     coreWITP.classList.remove("notshow")
@@ -66,7 +76,7 @@ returnButWITP.addEventListener("click", function() {
 const questionsAsObjectsWITP = [
     {
         image: "Images/pikachu_silhouette_transparent.png",
-        reveal: "Images/9gqTLKyYZZvNeZEz8mz9Gm9p-5vlrSoZlJeN-E0xr8ziuzKDq55lAjYn3EfHBK5Iesv9O7sbVA_zCvBVwBgLgKCqaNl8P2VmN2sxhbYDr_8K0gP5N2OWTK42du6Z9petqUqomCs4eZ-OzJl1X7vnP9YmpL_phK5zIQgQc2T7Cry2.jpg",
+        reveal: "Images/Pikachu.reveal.jpg",
         question: "Who is that pokemon?",
         answers: ["azumarill", "charizard", "pikachu", "greninja"],
         answer: "pikachu"
@@ -169,6 +179,7 @@ function checkAnswerWITP(input) {
         questionsWITPv1.classList.add("notshow");
         feedBack.style.color = "green"
         pokemonImgWITP.src = currentQuestionWITPs.reveal
+        updateTotalScore();
     } 
     else {
         feedBack.textContent = "Fout!";
@@ -182,6 +193,7 @@ function checkAnswerWITP(input) {
             scoreDisplayWITP.textContent = "Score: " + scoreWITP;
             feedBack.style.color = "red"
         }
+        updateTotalScore();
     }
 }
 
@@ -336,6 +348,7 @@ function checkAnswerWPE(input) {
         questionsWPE.classList.add("notshow");
         feedBackWPE.style.color = "green";
 
+        updateTotalScore();
     }
     else {
 
@@ -350,6 +363,8 @@ function checkAnswerWPE(input) {
         }
 
         scoreDisplayWPE.textContent = "Score: " + scoreWPE;
+
+        updateTotalScore();
     }
 }
 
@@ -422,7 +437,7 @@ returnButPSA.addEventListener("click", function() {
 const questionsAsObjectsPSA = [
     {
         question: "Wat is de signature ability van de Machop evolutielijn?",
-        answers: ["No Guard", "Guts", "Steadfast", "Inner Focus"],
+        answers: ["Steadfast", "Guts", "No Guard", "Inner Focus"],
         answer: "No Guard"
     },
     {
@@ -500,7 +515,7 @@ function checkAnswerPSA(input) {
 
         questionsPSA.classList.add("notshow");
         feedBackPSA.style.color = "green";
-
+        updateTotalScore();
     }
     else {
 
@@ -515,6 +530,7 @@ function checkAnswerPSA(input) {
         }
 
         scoreDisplayPSA.textContent = "Score: " + scorePSA;
+        updateTotalScore();
     }
 }
 
@@ -587,7 +603,7 @@ returnButPSM.addEventListener("click", function() {
 const questionsAsObjectsPSM = [
     {
         question: "Welke Pokémon heeft de signature move Darkest Lariat?",
-        answers: ["Incineroar", "Pangoro", "Malamar", "Grimmsnarl"],
+        answers: ["Grimmsnarl", "Pangoro", "Malamar", "Incineroar"],
         answer: "Incineroar"
     },
     {
@@ -597,22 +613,17 @@ const questionsAsObjectsPSM = [
     },
     {
         question: "Wat is de signature move van de Pokémon Arceus?",
-        answers: ["Judgment", "Divine Retribution", "Sacred Fire", "Judgment Beam"],
+        answers: ["Divine Retribution", "Judgment", "Sacred Fire", "Judgment Beam"],
         answer: "Judgment"
     },
     {
-        question: "Welke drie speciale moves kan Pikachu leren?",
-        answers: [
-            "Zippy Zap, Splishy Splash en Floaty Fall",
-            "Thunderbolt, Volt Tackle en Quick Attack",
-            "Electro Ball, Thunder Wave en Discharge",
-            "Iron Tail, Wild Charge en Agility"
-        ],
+        question: "Welke drie signature moves kan Pikachu leren?",
+        answers: ["Zippy Zap, Splishy Splash en Floaty Fall", "Thunderbolt, Volt Tackle en Quick Attack", "Electro Ball, Thunder Wave en Discharge", "Iron Tail, Wild Charge en Agility"],
         answer: "Zippy Zap, Splishy Splash en Floaty Fall"
     },
     {
         question: "Welke Pokémon heeft de signature move Sketch?",
-        answers: ["Smeargle", "Ditto", "Porygon", "Mew"],
+        answers: ["Porygon", "Ditto", "Smeargle", "Mew"],
         answer: "Smeargle"
     }
 ];
@@ -670,7 +681,7 @@ function checkAnswerPSM(input) {
 
         questionsPSM.classList.add("notshow");
         feedBackPSM.style.color = "green";
-
+        updateTotalScore();
     }
     else {
 
@@ -685,6 +696,7 @@ function checkAnswerPSM(input) {
         }
 
         scoreDisplayPSM.textContent = "Score: " + scorePSM;
+        updateTotalScore();
     }
 }
 
